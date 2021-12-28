@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Zoopzap</title>
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/line-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/simple-line-icons.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome5-overrides.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/Button-Change-Text-on-Hover.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Clean.css'%}">
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Zoopzap</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{%url 'login' %}" style="color: var(--bs-yellow);">login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{%url 'register'%}" style="color: var(--bs-yellow);">register</a></li>
+                    {%if username %}
+                    <li class="nav-item"><a class="nav-link" href="/{{username}}/" style="color: var(--bs-yellow);"></a></li>
+                    {%else %}
+                    <li class="nav-item"><a class="nav-link" href="/{{username}}/" style="color: var(--bs-yellow);">Contact</a></li>
+                    {%endif%}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url('{%static 'img/bg-pattern.png'%}'), linear-gradient(to left, #7b4397, #dc2430);">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div class="mx-auto header-content">
+                        <h1 class="mb-5">Zoopzap is your web-app<br>Upload whatever you want and send it right away to the cloud</h1><a class="btn btn-outline-warning btn-xl" role="button" href="{%url 'login' %}">Login/signup</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto">
+                    <div class="device-container"></div>
+                    <div class="iphone-mockup"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="text-center bg-primary download" id="download">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h2 class="section-heading">Discover what all the buzz is about!</h2><a class="button" href="app.html" type="button" data-hover="Here we go!!" style="background-color:white; color:black "><span>Zapzoop</span></a>
+                    <p>Our app is available on any mobile device! Download now to get started!</p>
+                    <div class="badges"><a class="badge-link" href="#"></a><a class="badge-link" href="#"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container">
+            <div class="text-center section-heading">
+                <h2>Unlimited Features, Unlimited Fun</h2>
+                <p class="text-muted">Peek-a-Boo our ZoopZap</p>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 my-auto">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-0">
+                                <div class="feature-item"><i class="icon-screen-smartphone text-primary"></i>
+                                    <h3>Compatibility</h3>
+                                    <p class="text-muted">Login with any of your devices and use it right away.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 offset-lg-0" style="padding-left: 68px;">
+                                <div class="feature-item"><i class="icon-camera text-primary"></i>
+                                    <h3>Flexible Use</h3>
+                                    <p class="text-muted">Upload anything you wish</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta" style="background-image:url('{% static 'img/bg-cta.jpg'%});">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Stop waiting.<br>Start building.<br></h2><a class="btn btn-outline-warning btn-xl" role="button" href="#contact">Let's Get Started!</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <section class="bg-primary contact" id="contact">
+        <div class="container">
+            <h2><span>We&nbsp;</span><i class="fa fa-heart"></i><span>&nbsp;new friends!</span></h2>
+            <ul class="list-inline list-social">
+                <li class="list-inline-item social-twitter"></li>
+                <li class="list-inline-item social-facebook"></li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>©&nbsp;Zoopzap 2021. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="{%static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'assets/js/new-age.js' %}"></script>
+</body>
+
+</html>

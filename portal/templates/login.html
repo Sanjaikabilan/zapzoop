@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>login</title>
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png' %}">
+    <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'fonts/simple-line-icons.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome5-overrides.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/Login-Form-Clean.css'%}">
+</head>
+
+<body style="color: var(--bs-gray-200);">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: var(--bs-warning);">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-white);">Zoopzap</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: var(--bs-gray-100);border-color: #e0d3d3;"><i class="fa fa-bars" style="color: var(--bs-gray-100);"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}" style="color: var(--bs-white);">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'register' %}" style="color: var(--bs-white);">register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: var(--bs-white);">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="login-clean" style="height: 706.2px;margin-top: 0;">
+        <form data-bss-redirect-url="app.html" style="margin-top: 82px;">
+            {% csrf_token %}
+            <h2 class="visually-hidden">Login Form</h2>
+            <div class="illustration"><i class="la la-user" style="color: rgb(255,222,47);"></i></div>
+            <div class="mb-3"> <input class="form-control" id="email"  type="email" name="email" placeholder="Email" Required></div>
+            <div class="mb-3"><input class="form-control" id="password" type="password" name="password" placeholder="Password" Required ></div>
+            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: rgb(255,193,7);">login</button>
+            </div>
+            <a class="forgot" href="{%url 'register'%}">Wanna Zoopzap?</a>
+        </form>
+    </section>
+    <footer style="background: var(--bs-dark);">
+        <div class="container">
+            <p style="color: var(--bs-white);">©&nbsp;Zoopzap 2021. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" style="color: var(--bs-white);">Privacy</a></li>
+                <li class="list-inline-item"><a href="#" style="color: var(--bs-white);">Terms</a></li>
+                <li class="list-inline-item"><a href="#" style="color: var(--bs-white);">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="{%static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'js/smart-forms.min.js'%}"></script>
+    <script src="{%static 'js/new-age.js'%}"></script>
+</body>
+
+</html>

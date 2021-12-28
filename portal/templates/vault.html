@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>vault</title>
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/line-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/simple-line-icons.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome5-overrides.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/Button-Change-Text-on-Hover.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Clean.css'%}">
+</head>
+
+<body>
+    <header></header>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: var(--bs-warning);">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-white);">Zoopzap</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: var(--bs-gray-100);border-color: #e0d3d3;"><i class="fa fa-bars" style="color: var(--bs-gray-100);"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: var(--bs-white);">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html" style="color: var(--bs-white);">register</a></li>
+                  
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: var(--bs-white);"></a>{{username}}</li>
+                    
+                     
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/new-age.js' %}"></script>
+</body>
+
+<div class="row" style="height: 148px;margin-top: 66px;"></div>
+<div class="col-xl-4 col-lg-6 col-md-6 mb-6">
+    {% for post in posts %}
+    {% if post.file %}
+
+    <div class="bg-white rounded shadow-sm"><img src="{{ post.file.url }}" alt="" class="img-fluid card-img-top">
+      <div class="p-4">
+        <h5> <a href="#" class="text-dark">{{ post.description }}</a></h5>
+        <p class="small text-muted mb-0">{{ post.description }}</p>
+        <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+          <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
+          <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+    {%endif%}
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</html>

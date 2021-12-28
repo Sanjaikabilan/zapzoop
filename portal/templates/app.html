@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Upload</title>
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="icon" type="image/png" sizes="67x67" href="{%static 'img/fav.png'%}">
+    <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/line-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/simple-line-icons.min.css'%}">
+    <link rel="stylesheet" href="{%static 'fonts/fontawesome5-overrides.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/Button-Change-Text-on-Hover.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Clean.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: var(--bs-warning);">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-white);">Zoopzap</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: var(--bs-gray-100);border-color: #e0d3d3;"><i class="fa fa-bars" style="color: var(--bs-gray-100);"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: var(--bs-white);">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html" style="color: var(--bs-white);">register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: var(--bs-white);">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light border rounded border-light jumbotron py-5 px-4" style="margin-top: 98px;">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Insert a file</h4>
+                <h6 class="text-muted card-subtitle mb-2"></h6>
+                <form method= "post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form|crispy}}
+                    <div class="mt-4"><button class="btn btn-success btn-lg" type="submit" value="Post" style="background: rgb(255,193,7);">Upload</button></div>
+                </form>
+                {% if url %}
+                <p> Uploaded file: <a href="{{ url }}">{{ url }}</a></p> 
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>©&nbsp;Zoopzap 2021. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/new-age.js"></script>
+</body>
+
+</html>
