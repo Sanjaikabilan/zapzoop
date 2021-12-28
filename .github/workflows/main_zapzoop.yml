@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'zapzoop'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A94A564764EC408D8835E24DF9D11C1C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A0820595A87B4E55A6B0C36445BF41B9 }}
