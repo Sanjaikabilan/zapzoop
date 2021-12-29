@@ -81,9 +81,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-       'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+      'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'sanju@zapzy',
+        'PASSWORD': 'sky@2608',
+        'HOST': 'zapzy.postgres.database.azure.com',
+        'PORT': '5432',
     }
 }
 
