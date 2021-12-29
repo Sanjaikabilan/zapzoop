@@ -82,13 +82,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DATABASES = {
        'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zapzoop',
-        'USER': 'sk@zapy',
-        'PASSWORD': os.getenv("DB_PASSWORD") ,
-        'HOST': 'zapy.postgres.database.azure.com',
-        'PORT': '5432',
-        'OPTIONS': {"sslmode": "require"} 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
