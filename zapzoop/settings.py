@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tuf3oe6==)l&u(d_nv^y+372w9sv*w!ky9h4tuyg#78l8-al$e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -83,10 +83,11 @@ DATABASES = {
        'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'zapzoop',
-        'USER': 'postgres',
-        'PASSWORD': 'root@2608',
-        'HOST': 'localhost',
+        'USER': 'sk@zapy',
+        'PASSWORD': os.getenv("DB_PASSWORD") ,
+        'HOST': 'zapy.postgres.database.azure.com',
         'PORT': '5432',
+        'OPTIONS': {"sslmode": "require"} 
     }
 }
 
